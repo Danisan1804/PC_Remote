@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    private static final String SERVER_URL = "http://100.123.221.22:8000";
+    private static final String SERVER_URL = "IP_Tailscale_PC";
 
     private WebView webView;
     private ProgressBar progressBar;
@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 String url = request.getUrl().toString();
                 // Mantener navegación interna dentro del servidor
-                if (url.startsWith(SERVER_URL) || url.startsWith("http://100.123.221.22")) {
+                if (url.startsWith(SERVER_URL) || url.startsWith("IP_Tailscale_PC")) {
                     return false;
                 }
                 // Links externos abrir en navegador
